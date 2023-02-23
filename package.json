@@ -4,7 +4,9 @@
     "description": "快速建立node与typescript项目的初始模版",
     "scripts": {
         "build": "tsc --project tsconfig.json && tsc-alias -p tsconfig.json",
-        "dev": "env-cmd -r .env.js -e development nodemon ./src/index.ts"
+        "dev": "env-cmd -r .env.js -e development nodemon ./src/index.ts",
+        "prepare": "husky install",
+        "husky": "husky add .husky/commit-msg \"npx --no-install commitlint --edit \"$1\"\""
     },
     "homepage": "https://xygeng.cn",
     "keywords": [
@@ -14,9 +16,12 @@
     "author": "xygengcn",
     "license": "ISC",
     "devDependencies": {
+        "@commitlint/cli": "^17.4.4",
+        "@commitlint/config-conventional": "^17.4.4",
         "@types/node": "^16.11.12",
         "env-cmd": "^10.1.0",
         "eslint": "^8.4.1",
+        "husky": "^8.0.3",
         "nodemon": "^2.0.15",
         "prettier": "^2.5.1",
         "ts-node": "^10.4.0",
