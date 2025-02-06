@@ -6,7 +6,6 @@
         "outDir": "./dist",
         "rootDir": "./src",
         "strict": true,
-        "watch": false,
         "noImplicitAny": false,
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
